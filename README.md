@@ -2,8 +2,12 @@
 
 Build:
 
-```mvn clean package```
+```sh
+mvn clean package
+```
 
 Execute:
 
-```./docker/run.sh```
+```sh
+./docker/run.sh
+```
