@@ -1,0 +1,40 @@
+{
+  "hotels": [
+    {
+      "id": 0,
+      "hotel": "Hotel 0",
+      "address": "Moon Base",
+      "country": "USA"
+    },
+    {
+      "id": 1,
+      "hotel": "Hotel 1",
+      "address": "123 Here",
+      "country": "USA"
+    },
+    {
+      "id": 2,
+      "hotel": "Hotel 2",
+      "address": "456 There",
+      "country": "USA"
+    },
+    {
+      "id": 3,
+      "hotel": "Hotel 3",
+      "address": "789 Somewhere",
+      "country": "USA"
+    },
+    {
+      "id": 4,
+      "hotel": "Hotel 4",
+      "address": "321 El Guapo",
+      "country": "Mexico"
+    },
+    {
+      "id": 5,
+      "hotel": "Hotel 5",
+      "address": "654 Le Jolie",
+      "country": "Canada"
+    }
+  ]
+}

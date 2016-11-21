@@ -1,0 +1,8 @@
+{
+  "stays.http.port": 8082,
+  "stays.http.host": "localhost",
+  "hotels.http.port": 8082,
+  "hotels.http.host": "localhost",
+  "worker.instances": 20,
+  "worker.max.execute.time": 120000
+}

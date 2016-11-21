@@ -1,0 +1,41 @@
+version: '2'
+services:
+
+  hotels:
+    image: java:alpine
+    ports:
+      - "8081:8081"
+    volumes:
+      - $DIR/../hotels-service/target/hotels-service-fat.jar:/var/app.jar:z
+      - $DIR/../hotels-service/src/main/conf/config.json:/etc/config.json
+    command: java -Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory -jar /var/app.jar -conf /etc/config.json
+
+  stays:
+    image: java:alpine
+    ports:
+      - "8082:8082"
+    volumes:
+      - $DIR/../stays-service/target/stays-service-fat.jar:/var/app.jar:z
+      - $DIR/../stays-service/src/main/conf/config.json:/etc/config.json
+    command: java -Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory -jar /var/app.jar -conf /etc/config.json
+
+  query-service:
+    image: java:alpine
+    volumes:
+      - $DIR/../query-service/target/query-service-fat.jar:/var/app.jar:z
+      - $DIR/../query-service/src/main/conf/docker.json:/etc/config.json:ro
+    command: java -Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory -jar /var/app.jar -cluster -conf /etc/config.json
+    depends_on:
+      - hotels
+      - stays
+
+  customer-service:
+    image: java:alpine
+    ports:
+      - "8083:8083"
+    volumes:
+      - $DIR/../customer-service/target/customer-service-fat.jar:/var/app.jar:z
+      - $DIR/../customer-service/src/main/conf/docker.json:/etc/config.json:ro
+    command: java -Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory -jar /var/app.jar -cluster -conf /etc/config.json
+    depends_on:
+      - query-service

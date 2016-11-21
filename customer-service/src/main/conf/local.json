@@ -1,0 +1,6 @@
+{
+  "api.name": "de-customer-service",
+  "customer.http.address": "0.0.0.0",
+  "customer.http.port": 8084,
+  "db.query.service.host": "localhost"
+}

@@ -1,0 +1,6 @@
+{
+  "stays.http.port": 8082,
+  "stays.http.host": "stays",
+  "hotels.http.port": 8082,
+  "hotels.http.host": "hotels"
+}

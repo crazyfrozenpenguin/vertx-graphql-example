@@ -1,0 +1,46 @@
+{
+  "stays": [
+    {
+      "id": 0,
+      "customer": "Bruno Santos",
+      "stays": [
+        {
+          "hotel": 1,
+          "arrival": "2012-04-23T18:25:43.511Z",
+          "departure": "2012-04-24T18:25:43.511Z"
+        },
+        {
+          "hotel": 3,
+          "arrival": "2012-04-24T18:25:43.511Z",
+          "departure": "2012-04-25T18:25:43.511Z"
+        },
+        {
+          "hotel": 2,
+          "arrival": "2012-04-25T18:25:43.511Z",
+          "departure": "2012-04-26T18:25:43.511Z"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "customer": "Doyle Young",
+      "stays": [
+        {
+          "hotel": 4,
+          "arrival": "2016-04-23T18:25:43.511Z",
+          "departure": "2016-04-24T18:25:43.511Z"
+        },
+        {
+          "hotel": 5,
+          "arrival": "2016-04-24T18:25:43.511Z",
+          "departure": "2016-04-25T18:25:43.511Z"
+        },
+        {
+          "hotel": 0,
+          "arrival": "2016-04-25T18:25:43.511Z",
+          "departure": "2016-04-26T18:25:43.511Z"
+        }
+      ]
+    }
+  ]
+}
